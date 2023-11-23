@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'jenkins-get-started-rgcd'
       def webAppName = 'app-name-cd'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'Vitrinemedia2023!', usernameVariable: 'appId')]) {
+      withCredentials([usernamePassword(credentialsId: '29f411f1-b2cf-4043-8ac8-2185d7316811', passwordVariable: 'Vitrinemedia2023!', usernameVariable: 'Christophe.douady@alyfacademy.fr')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
